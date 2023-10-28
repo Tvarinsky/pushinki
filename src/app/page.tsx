@@ -1,4 +1,3 @@
-use client;
 import React, { useState, useEffect } from 'react';
 import Button from "../Components/Button/button";
 import Header from "../Components/Header/header";
