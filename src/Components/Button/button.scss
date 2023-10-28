@@ -1,0 +1,47 @@
+button {
+  outline: none;
+  cursor: pointer;
+  font-family: "Pangram-Medium";
+  font-size: 18px;
+  width: max-content;
+  &.outline {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-left: 24px;
+    transition: 0.2s;
+    &:hover {
+      transition: 0.2s;
+      border: 1px solid #fff;
+      background: #fff;
+      color: #f2a781;
+    }
+  }
+  &.primary {
+    background: #f2a781;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-left: 24px;
+    transition: 0.2s;
+    border: none;
+    &:hover {
+      transition: 0.2s;
+      border: none;
+      background: #fff;
+      color: #f2a781;
+    }
+  }
+  &.main {
+    margin-left: 0;
+    padding: 15px 30px;
+    margin-top: 30px;
+    font-family: "Pangram-Bold";
+    &:hover {
+      background: #e79064;
+      color: #fff;
+    }
+  }
+}

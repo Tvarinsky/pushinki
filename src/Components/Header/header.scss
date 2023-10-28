@@ -1,0 +1,30 @@
+header {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        font-family: "Pangram-Bold";
+        font-size: 28px;
+        color: #202020;
+    }
+    .nav {
+        ul {
+            padding: 0;
+            display: flex;
+            li {
+                display: flex;
+                padding: 0 20px;
+                font-family: "Pangram-Medium";
+            }
+        }
+    }
+    .actions {
+        img {
+            max-width: 36px;
+            max-height: 36px;
+            margin-left: 10px;
+        }
+    }
+}

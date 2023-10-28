@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  .mainBanner {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    .content {
+      padding: 0 40px;
+      margin-top: 80px;
+    }
+    .bannerImage {
+      position: absolute;
+      right: -2%;
+      top: 0%;
+      .priceLink {
+        position: absolute;
+        bottom: 5%;
+        right: 10%;
+        padding: 0px 20px;
+        border-radius: 32px;
+        background: #fff;
+        min-width: 150px;
+        font-family: "Pangram-Medium";
+        h4 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        div {
+          display: inline-block;
+        }
+        .price {
+          font-family: "Pangram-Bold";
+          margin-left: 5px;
+        }
+      }
+    }
+    .videoContainer {
+      max-height: 600px;
+      overflow: hidden;
+      border-radius: 150px 0 0 0;
+      video {
+        position: relative;
+        max-width: 550px;
+        top: -120px;
+        z-index: -1;
+      }
+    }
+    .label {
+      background: #f2a781;
+      color: #fff;
+      padding: 5px 10px;
+      font-family: "Pangram-Medium";
+      font-size: 12px;
+      margin-top: 30px;
+      display: flex;
+      width: max-content;
+      border-radius: 30px;
+    }
+    .bannerLabel {
+      background: #fff;
+      color: #202020;
+      padding: 5px 10px;
+      font-family: "Pangram-Medium";
+      font-size: 14px;
+      margin-top: 30px;
+      display: flex;
+      width: max-content;
+      border-radius: 30px;
+      position: absolute; 
+    }
+    h1 {
+      font-family: "Pangram-Medium";
+      font-size: 72px;
+      max-width: 50%;
+      padding: 24px 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: #101010;
+    }
+  }
+  .catalog {
+    .content {
+      padding: 0 24px;
+    }
+    h2 {
+      font-family: "Pangram-Bold";
+      font-size: 36px;
+      color: #202020;
+    }
+  }
+}
