@@ -1,0 +1,107 @@
+/* Catalog.module.scss */
+
+.catalog {
+  padding: 40px;
+}
+
+.title {
+  font-family: "Pangram-Bold";
+  font-size: 36px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.productItem {
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: left;
+  transition: 0.15s;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s;
+  }
+
+  .imageContainer {
+    position: relative;
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px; /* Высота полосок */
+    opacity: 0; /* Изначально невидимый */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .imageContainer {
+    position: relative;
+
+    .overlayItem {
+      width: 30px; /* Ширина каждой полоски */
+      height: 100%;
+      margin: 0 4px; /* Расстояние между полосками */
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: background-color 0.1s ease-in-out;
+
+      &.activeOverlay {
+        background-color: #fff; /* Цвет активной полоски */
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: "Pangram-Bold";
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #101010;
+    opacity: 0.35;
+    font-family: "Pangram-Medium";
+  }
+
+  .price {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #e44d26;
+    font-family: "Pangram-Medium";
+    display: inline;
+    float: right;
+    position: relative;
+    top: -8px;
+  }
+}
