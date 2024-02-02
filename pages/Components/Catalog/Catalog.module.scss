@@ -12,7 +12,37 @@
 .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: start;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.hoverIcon {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  background-color: #fff;
+  border-radius: 20px 0 0 20px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.arrow {
+  display: inline-block;
+  border: solid #f2a781;
+  border-width: 0 3px 3px 0;
+  transition: .25s;
+  padding: 3px;
+  position: relative;
+  top: 10px;
+  left: 15px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .productItem {
@@ -23,10 +53,15 @@
   text-align: left;
   transition: 0.15s;
   position: relative;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: 0.15s;
+    .hoverIcon {
+      opacity: 1;
+      transition: .25s;
+    }
   }
 
   .imageContainer {
@@ -93,18 +128,75 @@
     margin: 10px 0;
     font-size: 14px;
     color: #101010;
-    opacity: 0.35;
+    opacity: 0.65;
     font-family: "Pangram-Medium";
   }
 
   .price {
     margin-top: 10px;
     font-size: 18px;
-    color: #e44d26;
+    color: #f2a781;
     font-family: "Pangram-Medium";
     display: inline;
     float: right;
     position: relative;
     top: -8px;
   }
+}
+
+// modal
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal h2 {
+  font-family: "Pangram-Bold";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 16px;
+  color: #101010;
+  opacity: 0.8;
+}
+
+.modal .price {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #f2a781;
+  font-family: "Pangram-Medium";
+  display: block;
 }

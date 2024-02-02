@@ -6,7 +6,7 @@ import Catalog from "./Components/Catalog/Catalog";
 
 export default function Home() {
   const toys = [
-    { name: "Цыплёнок", price: "1.000 ₽", videoSrc: "cypa.mov" },
+    { name: "Цыплёнок", price: "900 ₽", videoSrc: "cypa.mov" },
     { name: "Медвежонок", price: "1.500 ₽", videoSrc: "bear.mov" },
   ];
 
