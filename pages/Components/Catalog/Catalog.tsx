@@ -23,15 +23,27 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
   ) => {
     const containerRect = e.currentTarget.parentElement?.getBoundingClientRect();
     if (!containerRect) return;
-  
+
     const totalImages = products[productIndex].images.length;
     const indexToShow = Math.floor((percentage / 100) * totalImages);
-  
+
     const clampedIndex = Math.max(0, Math.min(indexToShow, totalImages - 1));
-  
+
+    const images = e.currentTarget.parentElement?.getElementsByTagName("img");
+    if (images) {
+      Array.from(images).forEach((img, i) => {
+        img.classList.remove(styles.active);
+        if (i !== clampedIndex) {
+          img.style.display = "none";
+        }
+      });
+
+      images[clampedIndex].classList.add(styles.active);
+      images[clampedIndex].style.display = "block";
+    }
+
     setHoveredIndex(clampedIndex);
   };
-  
 
   return (
     <div className={styles.catalog}>
@@ -45,16 +57,15 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
                   key={imageIndex}
                   src={image}
                   alt={product.name}
-                  className={hoveredIndex === imageIndex ? styles.active : ""}
                   onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     const containerRect = e.currentTarget.parentElement?.getBoundingClientRect();
                     if (!containerRect) return;
-                  
+
                     const percentage = ((e.clientX - containerRect.left) / containerRect.width) * 100;
-                  
+
                     handleImageHover(productIndex, percentage, e);
-                  }}               
+                  }}
                 />
               ))}
               <div className={styles.overlay}>

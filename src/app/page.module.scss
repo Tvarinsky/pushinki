@@ -21,8 +21,8 @@
       top: 0%;
       .priceLink {
         position: absolute;
-        bottom: 5%;
-        right: 10%;
+        bottom: 10%;
+        left: 7%;
         padding: 0px 20px;
         border-radius: 32px;
         background: #fff;
@@ -47,7 +47,7 @@
     .videoContainer {
       max-height: 600px;
       overflow: hidden;
-      border-radius: 150px 0 0 0;
+      border-radius: 150px 0 200px 0;
       video {
         position: relative;
         max-width: 550px;
