@@ -1,8 +1,7 @@
-// ProductCard.tsx
-
 import React, { useState } from "react";
 import styles from "./ProductCard.module.scss";
 import Button from "../Button/button";
+import { useCart } from "../../Context/CartContext";
 
 interface ProductCardProps {
   product: any;
@@ -11,9 +10,32 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClose }) => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const { dispatch, setCartOpen, cartState } = useCart();
 
   const handleThumbnailClick = (index: number) => {
     setActiveImageIndex(index);
+  };
+
+  const handleAddToCart = () => {
+    console.log("Adding to cart:", product);
+
+    const newItem = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0],
+      quantity: 1,
+    };
+
+    console.log("New Item:", newItem);
+
+    dispatch({ type: "ADD_ITEM", payload: newItem });
+
+    console.log("Cart State after adding:", cartState);
+
+    setCartOpen(true);
+
+    onClose();
   };
 
   return (
@@ -59,9 +81,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClose }) => {
         <span className={styles.label}>📏 Высота: 20 см</span>
         <span className={styles.label}>📐 Ширина: 15 см</span>
 
-        <Button className="main" size="large" type="primary">
+        <Button
+          className="main"
+          size="large"
+          type="primary"
+          onClick={handleAddToCart}
+        >
           {`Добавить в корзину за ${product.price} ₽`}
         </Button>
+        <Button className={styles.wishlistButton} size="large" type="secondary">
+          <img src="icons/wishlist.svg" alt="" />
+        </Button>
+
+        <span className={styles.small}>
+          По желанию заказчика цвета игрушки могут быть изменены*
+        </span>
       </div>
     </div>
   );

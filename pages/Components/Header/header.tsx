@@ -1,4 +1,9 @@
+import { useCart } from "../../Context/CartContext";
+
 export default function Header() {
+    const { setCartOpen, isCartOpen } = useCart();
+    
+
     return (
         <header>
             <div className="logo">
@@ -14,7 +19,7 @@ export default function Header() {
             </div>
             <div className="actions">
                 <img src="./icons/wishlist.svg" alt="" />
-                <img src="./icons/bag.svg" alt="" />
+                <img src="./icons/bag.svg" alt="" onClick={() => setCartOpen(!isCartOpen)} />
             </div>
         </header>
     )

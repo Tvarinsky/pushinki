@@ -8,6 +8,20 @@
   border-radius: 5px;
 }
 
+.wishlistButton {
+  position: relative;
+  top: 10px;
+}
+
+.small {
+  display: block;
+  margin-top: 10px;
+  position: relative;
+  font-size: 12px;
+  font-family: "Pangram-Medium";
+  color: #999;
+}
+
 .label {
   background: #eee;
   color: #101010;
@@ -62,6 +76,7 @@
   text-align: left;
   h3 {
     font-size: 48px;
+    margin-top: 15px;
     font-family: "Pangram-Bold";
     margin-bottom: 0;
   }

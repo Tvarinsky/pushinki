@@ -27,14 +27,6 @@ export default function Home() {
     fetchData();
   }, [products]);
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setActiveIndex((prevIndex) => (prevIndex + 1) % toys.length);
-  //   }, 15000);
-
-  //   return () => clearInterval(intervalId);
-  // }, []);
-
   return (
     <main>
       <div className={styles.container}>

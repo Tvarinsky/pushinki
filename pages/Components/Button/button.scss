@@ -34,6 +34,24 @@ button {
       color: #f2a781;
     }
   }
+
+  &.secondary {
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-left: 24px;
+    transition: 0.2s;
+    border: none;
+    &:hover {
+      transition: 0.2s;
+      border: none;
+      background: #fff;
+      color: #f2a781;
+    }
+  }
+  img {
+    max-width: 36px !important;
+  }
   &.main {
     margin-left: 0;
     padding: 15px 30px;
@@ -44,4 +62,8 @@ button {
       color: #fff;
     }
   }
+}
+
+.wishlistButton {
+  margin-top: 30px;
 }

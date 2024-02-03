@@ -5,10 +5,11 @@ interface ButtonProps {
   type: string;
   size: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, type, size, className }) => {
-  return <button className={`${type} ${size} ${className ?? ""}`}>{children}</button>;
+const Button: React.FC<ButtonProps> = ({ children, type, size, className, onClick }) => {
+  return <button onClick={onClick} className={`${type} ${size} ${className ?? ""}`}>{children}</button>;
 };
 
 export default Button;

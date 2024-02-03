@@ -1,0 +1,88 @@
+#cart-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.title {
+  font-family: "Pangram-Bold";
+  font-size: 24px;
+}
+
+.total {
+  font-family: "Pangram-Medium";
+  position: absolute;
+  bottom: 7.5dvh;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.checkoutButton {
+  outline: none;
+  cursor: pointer;
+  font-family: "Pangram-Medium";
+  font-size: 18px;
+  width: max-content;
+  background: #f2a781;
+  color: #fff;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 30px;
+  transition: 0.2s;
+  border: none;
+  &:hover {
+    transition: 0.2s;
+    border: none;
+    background: #fff;
+    color: #f2a781;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  .item {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+  }
+  img {
+    max-width: 80px;
+    border-radius: 5px;
+  }
+  h4 {
+    margin-top: 5px;
+  }
+  .rightCart {
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: "Pangram-Medium";
+    width: 100%;
+    .quantityL {
+      font-size: 12px;
+      font-family: "Pangram-Medium";
+    }
+    span {
+      margin-top: 0;
+      display: block;
+      margin-top: 7.5px;
+    }
+    .quantity {
+      display: flex;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 24px;
+    }
+  }
+}
