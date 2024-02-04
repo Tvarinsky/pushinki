@@ -1,8 +1,8 @@
 import { useCart } from "../../Context/CartContext";
 
 export default function Header() {
-    const { setCartOpen, isCartOpen } = useCart();
-    
+    const { setCartOpen, isCartOpen, cartState  } = useCart();
+    const totalItems = cartState.items.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <header>
@@ -20,6 +20,7 @@ export default function Header() {
             <div className="actions">
                 <img src="./icons/wishlist.svg" alt="" />
                 <img src="./icons/bag.svg" alt="" onClick={() => setCartOpen(!isCartOpen)} />
+                {totalItems > 0 && <span onClick={() => setCartOpen(!isCartOpen)} className="cartItemCount">{totalItems}</span>}
             </div>
         </header>
     )

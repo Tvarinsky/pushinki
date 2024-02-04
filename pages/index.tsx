@@ -3,6 +3,7 @@ import styles from "../src/app/page.module.scss";
 import Button from "./Components/Button/button";
 import Header from "./Components/Header/header";
 import Catalog from "./Components/Catalog/Catalog";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
   const toys = [
@@ -12,6 +13,17 @@ export default function Home() {
 
   const [products, setProducts] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleChooseToyClick = () => {
+    const catalogBlock = document.getElementById("catalogBlock");
+  
+    if (catalogBlock) {
+      scroll.scrollTo(catalogBlock.offsetTop - 50, {
+        duration: 500,
+        smooth: true,
+      });
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +37,7 @@ export default function Home() {
     };
 
     fetchData();
-  }, [products]);
+  }, []);
 
   return (
     <main>
@@ -37,7 +49,7 @@ export default function Home() {
             <h1>
               Милые вязаные игрушки <span>ручной работы</span>
             </h1>
-            <Button className="main" size="large" type="primary">
+            <Button className="main" size="large" type="primary" onClick={handleChooseToyClick}>
               {"Выбрать игрушку"}
             </Button>
             <div className={styles.bannerImage}>

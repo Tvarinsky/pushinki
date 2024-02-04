@@ -12,3 +12,18 @@ body {
   font-family: "Pangram-Medium";
   src: url("./fonts/PPPangramSans-Medium.otf");
 }
+
+.cartItemCount {
+  display: inline-block;
+  width: 10px;
+  text-align: center;
+  padding: 3px 5px;
+  font-size: 12px;
+  position: relative;
+  left: -15px;
+  border-radius: 100%;
+  background: #f2a781;
+  color: #fff;
+  font-family: "Pangram-Bold";
+  cursor: pointer;
+}

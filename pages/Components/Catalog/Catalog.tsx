@@ -60,7 +60,7 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
   };
 
   return (
-    <div className={styles.catalog}>
+    <div id="catalogBlock" className={styles.catalog}>
       <h2 className={styles.title}>Наши пушинки</h2>
       <div className={styles.content}>
         {products.map((product, productIndex) => (
