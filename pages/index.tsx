@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
   const toys = [
-    { name: "Цыплёнок", price: "900 ₽", videoSrc: "cypa.mov" },
+    { name: "Цыплёнок", price: "850 ₽", videoSrc: "cypa.mov" },
     { name: "Медвежонок", price: "1.500 ₽", videoSrc: "bear.mov" },
   ];
 

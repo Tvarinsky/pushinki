@@ -78,8 +78,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClose }) => {
         <p>
           <b>Размеры</b>
         </p>
-        <span className={styles.label}>📏 Высота: 20 см</span>
-        <span className={styles.label}>📐 Ширина: 15 см</span>
+        <span className={styles.label}>⚖️ Вес игрушки: {product.weight}</span>
+        <span className={styles.label}>📐 Размер: {product.size}</span>
 
         <Button
           className="main"
