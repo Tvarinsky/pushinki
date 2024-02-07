@@ -1,5 +1,17 @@
   [
     {
+      "id": 0,
+      "name": "Зайка",
+      "price": "2500",
+      "description": "Пушистый зайка - идеальный подарок, полный очарования",
+      "images": [
+        "zayka/zayka.jpg",
+        "zayka/zayka2.jpg",
+        "zayka/zayka3.jpg",
+        "zayka/zayka4.jpg"
+      ]
+    },
+    {
       "id": 1,
       "name": "Котик",
       "price": "500",

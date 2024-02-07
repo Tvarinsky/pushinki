@@ -98,4 +98,24 @@
       color: #202020;
     }
   }
+  .advantages {
+    padding: 40px;
+    .left {
+      max-width: 50%;
+    }
+    .right {
+      margin-top: 80px;
+      max-width: 50%;
+      margin-left: 50%;
+    }
+    h3 {
+      font-family: "Pangram-Bold";
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      font-family: "Pangram-Medium";
+    }
+  }
 }

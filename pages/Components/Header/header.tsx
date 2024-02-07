@@ -12,6 +12,7 @@ export default function Header() {
             <div className="nav">
                 <ul>
                     <li>Игрушки</li>
+                    <li>Контакты</li>
                     <li>Доставка</li>
                     <li>Оплата</li>
                     <li>Статус заказа</li>

@@ -16,7 +16,7 @@ export default function Home() {
 
   const handleChooseToyClick = () => {
     const catalogBlock = document.getElementById("catalogBlock");
-  
+
     if (catalogBlock) {
       scroll.scrollTo(catalogBlock.offsetTop - 50, {
         duration: 500,
@@ -49,7 +49,12 @@ export default function Home() {
             <h1>
               Милые вязаные игрушки <span>ручной работы</span>
             </h1>
-            <Button className="main" size="large" type="primary" onClick={handleChooseToyClick}>
+            <Button
+              className="main"
+              size="large"
+              type="primary"
+              onClick={handleChooseToyClick}
+            >
               {"Выбрать игрушку"}
             </Button>
             <div className={styles.bannerImage}>
@@ -78,6 +83,34 @@ export default function Home() {
           </div>
         </div>
         <Catalog products={products} />
+        <section className={styles.advantages}>
+          <div className={styles.left}>
+            <h3>
+              <img style={{ maxWidth: "36px" }} src="knitted.svg" alt="" /> О
+              нашей пряже
+            </h3>
+            <p>
+              Пряжа для наших игрушек прошла сертификацию по стандартам
+              <br />
+              OEKO-TEX CLASS1, что гарантирует ее безопасность для детской кожи
+              <br /> и исключает наличие канцерогенов и аллергенов
+            </p>
+          </div>
+          <div className={styles.right}>
+            <h3>
+              <img style={{ maxWidth: "36px" }} src="sheep.svg" alt="" /> О
+              наполнителе
+            </h3>
+            <p>
+              В качестве наполнителя используется холлофайбер — материал с<br/>
+              максимальной гипоаллергенностью и стойкостью к развитию грибков и<br/>
+              микроорганизмов. Этот компонент не только экологичен, но и<br/>
+              поддерживает высокие стандарты гигиеничности. Именно поэтому он<br/>
+              отлично подходит для создания продукции для детей, обеспечивая<br/>
+              безопасность даже для самых маленьких потребителей
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   );
