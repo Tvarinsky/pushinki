@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useCart } from '../../Context/CartContext';
 import styles from './Cart.module.scss';
+import Checkout from '../Checkout/Checkout';
 
 interface OverlayProps {
   isOpen: boolean;
@@ -75,8 +76,11 @@ const CartContainer = styled.div<CartContainerProps>`
     ${({ isOpen }) => (isOpen ? fadeIn : fadeOut)} 0.3s ease-in-out;
 `;
 
+
 const Cart = () => {
   const { cartState, isCartOpen, setCartOpen, dispatch } = useCart();
+  const [showCheckout, setShowCheckout] = useState(false);
+
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
@@ -111,6 +115,7 @@ const Cart = () => {
   
   const handleCheckout = () => {
     setCartOpen(false);
+    setShowCheckout(true);
   };
 
   return (
@@ -145,6 +150,7 @@ const Cart = () => {
           </button>
         </div>
       </CartContainer>
+      {showCheckout && <Checkout />}
     </>
   );
 };
