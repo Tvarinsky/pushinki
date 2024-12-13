@@ -11,6 +11,23 @@
   display: none;
 }
 
+.emptyCart, .sadCart {
+  display: block;
+  font-family: "Pangram-Bold";
+  text-align: center;
+}
+
+.sadCart {
+  font-size: 72px;
+  margin-bottom: 0;
+}
+
+.cartBtn {
+  display: block;
+  padding: 10px 15px !important;
+  margin: 0 auto !important;
+}
+
 .title {
   font-family: "Pangram-Bold";
   font-size: 24px;

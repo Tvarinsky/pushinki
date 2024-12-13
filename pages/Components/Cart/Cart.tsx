@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { useCart } from '../../Context/CartContext';
-import styles from './Cart.module.scss';
-import Checkout from '../Checkout/Checkout';
+import React, { useState } from "react";
+import styled, { keyframes } from "styled-components";
+import { useCart } from "../../Context/CartContext";
+import styles from "./Cart.module.scss";
+import Checkout from "../Checkout/Checkout";
+import Button from "../Button/button";
 
 interface OverlayProps {
   isOpen: boolean;
@@ -52,8 +53,8 @@ const Overlay = styled.div<OverlayProps>`
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   cursor: pointer;
 `;
@@ -65,8 +66,8 @@ interface CartContainerProps {
 const CartContainer = styled.div<CartContainerProps>`
   position: fixed;
   top: 0;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-350px')};
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  right: ${({ isOpen }) => (isOpen ? "0" : "-350px")};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   width: 300px;
   height: 100%;
   padding: 20px;
@@ -76,11 +77,9 @@ const CartContainer = styled.div<CartContainerProps>`
     ${({ isOpen }) => (isOpen ? fadeIn : fadeOut)} 0.3s ease-in-out;
 `;
 
-
 const Cart = () => {
   const { cartState, isCartOpen, setCartOpen, dispatch } = useCart();
   const [showCheckout, setShowCheckout] = useState(false);
-
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
@@ -88,31 +87,54 @@ const Cart = () => {
   };
 
   const calculateTotalCost = () => {
-    return cartState.items.reduce((total, item) => (total + item.price * (item.quantity || 0)), 0);
+    return cartState.items.reduce(
+      (total, item) => total + item.price * (item.quantity || 0),
+      0
+    );
+  };
+
+  const removeCartItem = (itemId: number) => {
+    dispatch({
+      type: "REMOVE_ITEM",
+      payload: {
+        id: itemId,
+      },
+    });
   };
 
   const handleQuantityChange = (itemId: number, change: number) => {
-    const updatedItems = cartState.items.map(item =>
-      item.id === itemId
-        ? { ...item, quantity: Math.max(item.quantity + change, 1) }
-        : item
-    );
     // @ts-ignore
-    dispatch({ type: 'UPDATE_QUANTITY', payload: { id: itemId, quantity: Math.max(cartState.items.find(item => item.id === itemId)?.quantity + 1 || 0, 1) } });
+    dispatch({
+      type: "UPDATE_QUANTITY",
+      payload: {
+        id: itemId,
+        quantity: Math.max(
+          // @ts-ignore
+          cartState.items.find((item) => item.id === itemId)?.quantity + 1 || 0,
+          1
+        ),
+      },
+    });
   };
 
   const handleQuantityChangeMinus = (itemId: number, change: number) => {
-    const updatedItems = cartState.items.map(item =>
-      item.id === itemId
-        ? { ...item, quantity: Math.max(item.quantity + change, 1) }
-        : item
-    );
-  
-    // @ts-ignore
-    dispatch({ type: 'UPDATE_QUANTITY', payload: { id: itemId, quantity: Math.max(cartState.items.find(item => item.id === itemId)?.quantity - 1 || 0, 1) } });
+    dispatch({
+      type: "UPDATE_QUANTITY",
+      payload: {
+        id: itemId,
+        quantity: Math.max(
+          // @ts-ignore
+          cartState.items.find((item) => item.id === itemId)?.quantity - 1 || 0,
+          1
+        ),
+      },
+    });
+
+    if (cartState.items.find((item) => item.id === itemId)?.quantity === 1) {
+      removeCartItem(itemId);
+    }
   };
-  
-  
+
   const handleCheckout = () => {
     setCartOpen(false);
     setShowCheckout(true);
@@ -121,10 +143,23 @@ const Cart = () => {
   return (
     <>
       <Overlay onClick={handleOverlayClick} isOpen={isCartOpen} />
-      <CartContainer id="cart-container" className={styles.cartContainer} isOpen={isCartOpen}>
+      <CartContainer
+        id="cart-container"
+        className={styles.cartContainer}
+        isOpen={isCartOpen}
+      >
         <h2 className={styles.title}>Корзина</h2>
         <div className={styles.items}>
-          {cartState.items.map(item => (
+          {!cartState.items.length && (
+            <>
+              <h2 className={styles.sadCart}>😢</h2>
+              <p className={styles.emptyCart}>Кажется тут совсем пусто</p>
+              <Button onClick={() => setCartOpen(false)} className={styles.cartBtn} size="large" type="primary">
+                {"Продолжить покупки"}
+              </Button>
+            </>
+          )}
+          {cartState.items.map((item) => (
             <div className={styles.item} key={item.id}>
               <div className={styles.leftCart}>
                 <img src={item.image} alt="" />
@@ -135,20 +170,36 @@ const Cart = () => {
                 </h4>
                 <span className={styles.quantityL}>Количество</span>
                 <div className={styles.quantity}>
-                  <button onClick={() => handleQuantityChangeMinus(item.id, item.quantity - 1)}>-</button>
+                  <button
+                    onClick={() =>
+                      handleQuantityChangeMinus(item.id, item.quantity - 1)
+                    }
+                  >
+                    -
+                  </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => handleQuantityChange(item.id, item.quantity + 1)}>+</button>
+                  <button
+                    onClick={() =>
+                      handleQuantityChange(item.id, item.quantity + 1)
+                    }
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className={styles.total}>
-          <p>Общая стоимость: <b>{calculateTotalCost()} ₽</b></p>
-          <button className={styles.checkoutButton} onClick={handleCheckout}>
-            Оформить заказ
-          </button>
-        </div>
+        {!!cartState.items.length && (
+          <div className={styles.total}>
+            <p>
+              Общая стоимость: <b>{calculateTotalCost()} ₽</b>
+            </p>
+            <button className={styles.checkoutButton} onClick={handleCheckout}>
+              Оформить заказ
+            </button>
+          </div>
+        )}
       </CartContainer>
       {showCheckout && <Checkout />}
     </>

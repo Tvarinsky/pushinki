@@ -6,10 +6,7 @@ import Catalog from "./Components/Catalog/Catalog";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
-  const toys = [
-    { name: "Цыплёнок", price: "850 ₽", videoSrc: "cypa.mov" },
-    { name: "Медвежонок", price: "1.500 ₽", videoSrc: "bear.mov" },
-  ];
+  const toys = [{ name: "Цыплёнок", price: "850 ₽", videoSrc: "cypa.mov" }];
 
   const [products, setProducts] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,7 +44,7 @@ export default function Home() {
           <div className={styles.content}>
             <span className={styles.label}>Сделано с любовью ❤️</span>
             <h1>
-              Милые вязаные игрушки <span>ручной работы</span>
+              Милые вязаные изделия <span>ручной работы</span>
             </h1>
             <Button
               className="main"
@@ -57,6 +54,7 @@ export default function Home() {
             >
               {"Выбрать игрушку"}
             </Button>
+            <a className={styles.customChoose} href="#">Своя игрушка</a>
             <div className={styles.bannerImage}>
               <div className={styles.priceLink}>
                 <h4>
@@ -102,11 +100,14 @@ export default function Home() {
               наполнителе
             </h3>
             <p>
-              В качестве наполнителя используется холлофайбер — материал с<br/>
-              максимальной гипоаллергенностью и стойкостью к развитию грибков и<br/>
-              микроорганизмов. Этот компонент не только экологичен, но и<br/>
-              поддерживает высокие стандарты гигиеничности. Именно поэтому он<br/>
-              отлично подходит для создания продукции для детей, обеспечивая<br/>
+              В качестве наполнителя используется холлофайбер — материал с<br />
+              максимальной гипоаллергенностью и стойкостью к развитию грибков и
+              <br />
+              микроорганизмов. Этот компонент не только экологичен, но и<br />
+              поддерживает высокие стандарты гигиеничности. Именно поэтому он
+              <br />
+              отлично подходит для создания продукции для детей, обеспечивая
+              <br />
               безопасность даже для самых маленьких потребителей
             </p>
           </div>

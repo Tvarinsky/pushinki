@@ -24,6 +24,7 @@ export default function Header() {
             <div className="nav">
                 <ul>
                     <li onClick={() => handleChooseToyClick()}>Игрушки</li>
+                    {/* <li onClick={() => handleChooseToyClick()}>Зимний уют</li> */}
                     <li>Контакты</li>
                     <li>Доставка</li>
                     <li>Оплата</li>

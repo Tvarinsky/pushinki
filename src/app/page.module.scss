@@ -55,6 +55,11 @@
         z-index: -1;
       }
     }
+    .customChoose {
+      color: #f2a781;
+      font-family: "Pangram-Medium";
+      margin-left: 20px;
+    }
     .label {
       background: #f2a781;
       color: #fff;
@@ -76,7 +81,7 @@
       display: flex;
       width: max-content;
       border-radius: 30px;
-      position: absolute; 
+      position: absolute;
     }
     h1 {
       font-family: "Pangram-Medium";
