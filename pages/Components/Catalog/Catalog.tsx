@@ -8,7 +8,7 @@ interface Product {
   price: string;
   description: string;
   images: string[];
-  url: string,
+  url: string;
 }
 
 interface CatalogProps {
@@ -30,6 +30,11 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
 
   const closeProductCard = () => {
     setSelectedProduct(null);
+
+    if (typeof window !== "undefined") {
+      const newUrl = window.location.origin;
+      window.history.pushState(null, "", newUrl);
+    }
   };
 
   useEffect(() => {

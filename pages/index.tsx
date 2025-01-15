@@ -3,7 +3,8 @@ import styles from "../src/app/page.module.scss";
 import Button from "./Components/Button/button";
 import Header from "./Components/Header/header";
 import Catalog from "./Components/Catalog/Catalog";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 export default function Home() {
   const toys = [{ name: "Цыплёнок", price: "850 ₽", videoSrc: "cypa.mov" }];
@@ -67,7 +68,7 @@ export default function Home() {
                     </div>
                   </div>
                   <Button className="" size="large" type="primary">
-                    {"→"}
+                    <a style={{color: "unset", textDecoration: "none"}} href="?product=cyplenok">{"→"}</a>
                   </Button>
                 </h4>
               </div>
