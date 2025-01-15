@@ -54,7 +54,9 @@ export default function Home() {
             >
               {"Выбрать игрушку"}
             </Button>
-            <a className={styles.customChoose} href="#">Своя игрушка</a>
+            <a className={styles.customChoose} href="#">
+              Своя игрушка
+            </a>
             <div className={styles.bannerImage}>
               <div className={styles.priceLink}>
                 <h4>
@@ -84,18 +86,6 @@ export default function Home() {
         <section className={styles.advantages}>
           <div className={styles.left}>
             <h3>
-              <img style={{ maxWidth: "36px" }} src="knitted.svg" alt="" /> О
-              нашей пряже
-            </h3>
-            <p>
-              Пряжа для наших игрушек прошла сертификацию по стандартам
-              <br />
-              OEKO-TEX CLASS1, что гарантирует ее безопасность для детской кожи
-              <br /> и исключает наличие канцерогенов и аллергенов
-            </p>
-          </div>
-          <div className={styles.right}>
-            <h3>
               <img style={{ maxWidth: "36px" }} src="sheep.svg" alt="" /> О
               наполнителе
             </h3>
@@ -109,6 +99,18 @@ export default function Home() {
               отлично подходит для создания продукции для детей, обеспечивая
               <br />
               безопасность даже для самых маленьких потребителей
+            </p>
+          </div>
+          <div className={styles.right}>
+            <h3>
+              <img style={{ maxWidth: "36px" }} src="knitted.svg" alt="" /> О
+              нашей пряже
+            </h3>
+            <p>
+              Пряжа для наших игрушек прошла сертификацию по стандартам
+              <br />
+              OEKO-TEX CLASS1, что гарантирует ее безопасность для детской кожи
+              <br /> и исключает наличие канцерогенов и аллергенов
             </p>
           </div>
         </section>

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Catalog.module.scss";
+import React, { useState } from "react";
+import styles from "./YouMightLike.module.scss";
 import ProductCard from "../ProductCard/ProductCard";
 
 interface Product {
@@ -8,14 +8,13 @@ interface Product {
   price: string;
   description: string;
   images: string[];
-  url: string,
 }
 
 interface CatalogProps {
   products: Product[];
 }
 
-const Catalog: React.FC<CatalogProps> = ({ products }) => {
+const YouMightLike: React.FC<CatalogProps> = ({ products }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
@@ -31,20 +30,6 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
   const closeProductCard = () => {
     setSelectedProduct(null);
   };
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const productUrl = queryParams.get("product");
-
-    if (productUrl) {
-      const product = products.find((p) => p.url === productUrl);
-      if (product) {
-        setSelectedProduct(product);
-      } else {
-        console.warn(`Продукт с URL "${productUrl}" не найден.`);
-      }
-    }
-  }, [products]);
 
   const handleImageHover = (
     productIndex: number,
@@ -81,7 +66,7 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
 
   return (
     <div id="catalogBlock" className={styles.catalog}>
-      <h2 className={styles.title}>Наши пушинки</h2>
+      <h2 className={styles.title}>Вам может понравиться</h2>
       <div className={styles.content}>
         {products?.length > 0 ? (
           products.map((product, productIndex) => (
@@ -166,4 +151,4 @@ const Catalog: React.FC<CatalogProps> = ({ products }) => {
   );
 };
 
-export default Catalog;
+export default YouMightLike;

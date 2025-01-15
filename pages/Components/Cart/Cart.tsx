@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { useCart } from "../../Context/CartContext";
+import { useCart } from "../../../Context/CartContext";
 import styles from "./Cart.module.scss";
 import Checkout from "../Checkout/Checkout";
 import Button from "../Button/button";

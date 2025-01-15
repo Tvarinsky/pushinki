@@ -77,6 +77,7 @@
   }
   h4 {
     margin-top: 5px;
+    margin-bottom: 8px;
   }
   .rightCart {
     margin-left: 10px;
@@ -90,16 +91,19 @@
     span {
       margin-top: 0;
       display: block;
-      margin-top: 7.5px;
+      padding-top: 3.5px;
     }
     .quantity {
       display: flex;
+      width: max-content;
+      justify-content: flex-end;
+      font-size: 16px;
     }
     button {
       cursor: pointer;
       border: none;
       background: none;
-      font-size: 24px;
+      font-size: 16px;
     }
   }
 }

@@ -1,205 +1,219 @@
-  [
-    {
-      "id": 0,
-      "name": "Зайка",
-      "price": "2750",
-      "description": "Пушистый зайка - идеальный подарок, полный очарования",
-      "images": [
-        "zayka/zayka.jpg",
-        "zayka/zayka2.jpg",
-        "zayka/zayka3.jpg",
-        "zayka/zayka4.jpg"
-      ],
-      "weight": "405 гр.",
-      "size": "30 см."
-    },
-    {
-      "id": 1,
-      "name": "Котик",
-      "price": "500",
-      "description": "Мягкий котик - идеальный подарок, полный очарования",
-      "images": [
-        "kotik/kotik.jpg",
-        "kotik/kotik2.jpg"
-      ],
-      "weight": "30 гр.",
-      "size": "10x9 см."
-    },
-    {
-      "id": 6,
-      "name": "Динозаврик",
-      "price": "1400",
-      "description": "Динозаврик - нежный компаньон, готовый подарить уют и радость",
-      "images": [
-        "dyno/dyno3.jpg",
-        "dyno/dyno2.jpg",
-        "dyno/dyno.jpg",
-        "dyno/dyno4.jpg"
-      ],
-      "weight": "131 гр.",
-      "size": "18 см."
-    },
-    {
-      "id": 3,
-      "name": "Барашек",
-      "price": "1500",
-      "description": "Пушистый барашек - новый друг, приносящий радость и уют",
-      "images": [
-        "baranchik/baranchik2.jpg",
-        "baranchik/baranchik.jpg",
-        "baranchik/baranchik3.jpg",
-        "baranchik/baranchik4.jpg",
-        "baranchik/baranchik5.jpg"
-      ],
-      "weight": "72 гр.",
-      "size": "22 см."
-    },
-    {
-      "id": 2,
-      "name": "Змейка",
-      "price": "600",
-      "description": "Волшебная Змейка - легкая и гибкая, вплетает в ваш день волшебство",
-      "images": [
-        "zmeyka/zmeyka.jpg",
-        "zmeyka/zmeyka2.jpg",
-        "zmeyka/zmeyka3.jpg",
-        "zmeyka/zmeyka4.jpg"
-      ],
-      "weight": "46 гр.",
-      "size": "33 см."
-    },
-    {
-      "id": 4,
-      "name": "Медузка",
-      "price": "1750",
-      "description": "Мягкая Медузка - уникальный образец, приносящий необычность и нежность",
-      "images": [
-        "meduzka/meduzka.jpg",
-        "meduzka/meduzka2.jpg",
-        "meduzka/meduzka3.jpg"
-      ],
-      "weight": "150 гр.",
-      "size": "37 см."
-    },
-    {
-      "id": 5,
-      "name": "Скатик",
-      "price": "1400",
-      "description": "Скатик Сказочник - чарующая игрушка, ваш волшебный спутник",
-      "images": [
-        "skatik/skatik.jpg",
-        "skatik/skatik2.jpg",
-        "skatik/skatik3.jpg",
-        "skatik/skatik4.jpg"
-      ],
-      "weight": "143 гр.",
-      "size": "31x24 см."
-    },
-    {
-      "id": 7,
-      "name": "Цыпленок",
-      "price": "850",
-      "description": "Плюшевый цыпленок идеальный спутник для ваших маленьких радостей",
-      "images": [
-        "cypa/cypa.jpg",
-        "cypa/cypa2.jpg",
-        "cypa/cypa3.jpg"
-      ],
-      "weight": "61 гр.",
-      "size": "13 см."
-    },
-    {
-      "id": 8,
-      "name": "Птенчик",
-      "price": "800",
-      "description": "Маленький цыпа - милый спутник, приносящий радость и уют.",
-      "images": [
-        "cypa2/cypa.jpg",
-        "cypa2/cypa2.jpg",
-        "cypa2/cypa3.jpg"
-      ],
-      "weight": "41 гр.",
-      "size": "11 см."
-    },
-    {
-      "id": 9,
-      "name": "Кальмарчик",
-      "price": "1300",
-      "description": "Мудрый кальмар - ваш идеальный компаньон для умиротворенных моментов.",
-      "images": [
-        "kalmar/kalmar.jpg",
-        "kalmar/kalmar2.jpg",
-        "kalmar/kalmar3.jpg"
-      ],
-      "weight": "50 гр.",
-      "size": "25 см."
-    },
-    {
-      "id": 10,
-      "name": "Рыбка-фишка",
-      "price": "400",
-      "description": "Милая маленькая рыбка - прикоснитесь к океану уюта с этим плюшевым спутником.",
-      "images": [
-        "fishka/fishka2.jpg",
-        "fishka/fishka.jpg"
-      ],
-      "weight": "20 гр.",
-      "size": "10 см."
-    },
-    {
-      "id": 11,
-      "name": "Рыбка кои",
-      "price": "1600",
-      "description": "Красивая рыбка кои - добавьте красок в свою жизнь с этим великолепным спутником.",
-      "images": [
-        "koi/koi3.jpg",
-        "koi/koi2.jpg",
-        "koi/koi.jpg",
-        "koi/koi4.jpg"
-      ],
-      "weight": "90 гр.",
-      "size": "30 см."
-    },
-    {
-      "id": 12,
-      "name": "Пчела",
-      "price": "700",
-      "description": "Большая пчелка - приносит в ваш день веселье и тепло.",
-      "images": [
-        "bpchela/bpchela2.jpg",
-        "bpchela/bpchela.jpg",
-        "bpchela/bpchela3.jpg",
-        "bpchela/bpchela4.jpg"
-      ],
-      "weight": "63 гр.",
-      "size": "14x13 см."
-    },
-    {
-      "id": 13,
-      "name": "Пчелка",
-      "price": "450",
-      "description": "Пчелка-малыш - маленький друг, приносящий вам улыбку.",
-      "images": [
-        "spchela/spchela4.jpg",
-        "spchela/spchela.jpg",
-        "spchela/spchela3.jpg",
-        "spchela/spchela2.jpg"
-      ],
-      "weight": "31 гр.",
-      "size": "11x9 см."
-    },
-    {
-      "id": 14,
-      "name": "Черепашка",
-      "price": "850",
-      "description": "Плюшевая черепашка - создает уют и тепло в вашем доме.",
-      "images": [
-        "turtle/turtle.jpg",
-        "turtle/turtle3.jpg",
-        "turtle/turtle2.jpg"
-      ],
-      "weight": "51 гр.",
-      "size": "13x18 см."
-    }
-  ]
-  
+[
+  {
+    "id": 0,
+    "name": "Зайка",
+    "price": "2750",
+    "description": "Пушистый зайка - идеальный подарок, полный очарования",
+    "images": [
+      "zayka/zayka.jpg",
+      "zayka/zayka2.jpg",
+      "zayka/zayka3.jpg",
+      "zayka/zayka4.jpg"
+    ],
+    "weight": "405 гр.",
+    "size": "30 см.",
+    "url": "zayka"
+  },
+  {
+    "id": 1,
+    "name": "Котик",
+    "price": "500",
+    "description": "Мягкий котик - идеальный подарок, полный очарования",
+    "images": [
+      "kotik/kotik.jpg",
+      "kotik/kotik2.jpg"
+    ],
+    "weight": "30 гр.",
+    "size": "10x9 см.",
+    "url": "kotik"
+  },
+  {
+    "id": 6,
+    "name": "Динозаврик",
+    "price": "1400",
+    "description": "Динозаврик - нежный компаньон, готовый подарить уют и радость",
+    "images": [
+      "dyno/dyno3.jpg",
+      "dyno/dyno2.jpg",
+      "dyno/dyno.jpg",
+      "dyno/dyno4.jpg"
+    ],
+    "weight": "131 гр.",
+    "size": "18 см.",
+    "url": "dinozavrik"
+  },
+  {
+    "id": 3,
+    "name": "Барашек",
+    "price": "1500",
+    "description": "Пушистый барашек - новый друг, приносящий радость и уют",
+    "images": [
+      "baranchik/baranchik2.jpg",
+      "baranchik/baranchik.jpg",
+      "baranchik/baranchik3.jpg",
+      "baranchik/baranchik4.jpg",
+      "baranchik/baranchik5.jpg"
+    ],
+    "weight": "72 гр.",
+    "size": "22 см.",
+    "url": "barashek"
+  },
+  {
+    "id": 2,
+    "name": "Змейка",
+    "price": "600",
+    "description": "Волшебная Змейка - легкая и гибкая, вплетает в ваш день волшебство",
+    "images": [
+      "zmeyka/zmeyka.jpg",
+      "zmeyka/zmeyka2.jpg",
+      "zmeyka/zmeyka3.jpg",
+      "zmeyka/zmeyka4.jpg"
+    ],
+    "weight": "46 гр.",
+    "size": "33 см.",
+    "url": "zmeyka"
+  },
+  {
+    "id": 4,
+    "name": "Медузка",
+    "price": "1750",
+    "description": "Мягкая Медузка - уникальный образец, приносящий необычность и нежность",
+    "images": [
+      "meduzka/meduzka.jpg",
+      "meduzka/meduzka2.jpg",
+      "meduzka/meduzka3.jpg"
+    ],
+    "weight": "150 гр.",
+    "size": "37 см.",
+    "url": "meduzka"
+  },
+  {
+    "id": 5,
+    "name": "Скатик",
+    "price": "1400",
+    "description": "Скатик Сказочник - чарующая игрушка, ваш волшебный спутник",
+    "images": [
+      "skatik/skatik.jpg",
+      "skatik/skatik2.jpg",
+      "skatik/skatik3.jpg",
+      "skatik/skatik4.jpg"
+    ],
+    "weight": "143 гр.",
+    "size": "31x24 см.",
+    "url": "skatik"
+  },
+  {
+    "id": 7,
+    "name": "Цыпленок",
+    "price": "850",
+    "description": "Плюшевый цыпленок идеальный спутник для ваших маленьких радостей",
+    "images": [
+      "cypa/cypa.jpg",
+      "cypa/cypa2.jpg",
+      "cypa/cypa3.jpg"
+    ],
+    "weight": "61 гр.",
+    "size": "13 см.",
+    "url": "cyplenok"
+  },
+  {
+    "id": 8,
+    "name": "Птенчик",
+    "price": "800",
+    "description": "Маленький цыпа - милый спутник, приносящий радость и уют.",
+    "images": [
+      "cypa2/cypa.jpg",
+      "cypa2/cypa2.jpg",
+      "cypa2/cypa3.jpg"
+    ],
+    "weight": "41 гр.",
+    "size": "11 см.",
+    "url": "ptenchik"
+  },
+  {
+    "id": 9,
+    "name": "Кальмарчик",
+    "price": "1300",
+    "description": "Мудрый кальмар - ваш идеальный компаньон для умиротворенных моментов.",
+    "images": [
+      "kalmar/kalmar.jpg",
+      "kalmar/kalmar2.jpg",
+      "kalmar/kalmar3.jpg"
+    ],
+    "weight": "50 гр.",
+    "size": "25 см.",
+    "url": "kalmarchik"
+  },
+  {
+    "id": 10,
+    "name": "Рыбка-фишка",
+    "price": "400",
+    "description": "Милая маленькая рыбка - прикоснитесь к океану уюта с этим плюшевым спутником.",
+    "images": [
+      "fishka/fishka2.jpg",
+      "fishka/fishka.jpg"
+    ],
+    "weight": "20 гр.",
+    "size": "10 см.",
+    "url": "rybka-fishka"
+  },
+  {
+    "id": 11,
+    "name": "Рыбка кои",
+    "price": "1600",
+    "description": "Красивая рыбка кои - добавьте красок в свою жизнь с этим великолепным спутником.",
+    "images": [
+      "koi/koi3.jpg",
+      "koi/koi2.jpg",
+      "koi/koi.jpg",
+      "koi/koi4.jpg"
+    ],
+    "weight": "90 гр.",
+    "size": "30 см.",
+    "url": "rybka-koi"
+  },
+  {
+    "id": 12,
+    "name": "Пчела",
+    "price": "700",
+    "description": "Большая пчелка - приносит в ваш день веселье и тепло.",
+    "images": [
+      "bpchela/bpchela2.jpg",
+      "bpchela/bpchela.jpg",
+      "bpchela/bpchela3.jpg",
+      "bpchela/bpchela4.jpg"
+    ],
+    "weight": "63 гр.",
+    "size": "14x13 см.",
+    "url": "pchela"
+  },
+  {
+    "id": 13,
+    "name": "Пчелка",
+    "price": "450",
+    "description": "Пчелка-малыш - маленький друг, приносящий вам улыбку.",
+    "images": [
+      "spchela/spchela4.jpg",
+      "spchela/spchela.jpg",
+      "spchela/spchela3.jpg",
+      "spchela/spchela2.jpg"
+    ],
+    "weight": "31 гр.",
+    "size": "11x9 см.",
+    "url": "pchelka"
+  },
+  {
+    "id": 14,
+    "name": "Черепашка",
+    "price": "850",
+    "description": "Плюшевая черепашка - создает уют и тепло в вашем доме.",
+    "images": [
+      "turtle/turtle.jpg",
+      "turtle/turtle3.jpg",
+      "turtle/turtle2.jpg"
+    ],
+    "weight": "51 гр.",
+    "size": "13x18 см.",
+    "url": "cherepashka"
+  }
+]

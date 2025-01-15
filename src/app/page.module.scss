@@ -105,13 +105,14 @@
   }
   .advantages {
     padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     .left {
-      max-width: 50%;
+      max-width: 49%;
     }
     .right {
-      margin-top: 80px;
-      max-width: 50%;
-      margin-left: 50%;
+      max-width: 49%;
     }
     h3 {
       font-family: "Pangram-Bold";
@@ -121,6 +122,13 @@
     p {
       font-size: 18px;
       font-family: "Pangram-Medium";
+    }
+  }
+  .contactPage, .deliveryPage {
+    font-family: "Pangram-Medium";
+    padding: 40px;
+    h1 {
+      font-family: "Pangram-Bold";
     }
   }
 }
